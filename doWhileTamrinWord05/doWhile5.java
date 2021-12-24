@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class doWhile5 {
     public static void main(String[] args) {
-        // الگوريتمي بنويسيد كه an را با استفاده از كامپيوتري كه تنها عملگر افزايش يك واحد به متغيرها دارد را انجام دهد.
+        // الگوريتمي بنويسيد كه an را با استفاده از كامپيوتري كه تنها عملگر افزايش يك
+        // واحد به متغيرها دارد را انجام دهد.
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 'a' Professor Pirahesh");
         int a = scanner.nextInt();
@@ -12,17 +13,19 @@ public class doWhile5 {
         int n = scanner.nextInt();
         int pow = a;
         int i = 1;
-        do{
+        do {
             int aux = pow;
             int j = 1;
-            do{
-                for(int k = 1; k <= aux; k++){
+            do {
+                int k = 1;
+                do {
                     pow += 1;
-                }
+                    k++;
+                } while (k <= aux);
                 j++;
-            }while(j < a);
+            } while (j < a);
             i++;
-        }while(i < n);
+        } while (i < n);
         System.out.println("powered number is : " + pow);
     }
 }
